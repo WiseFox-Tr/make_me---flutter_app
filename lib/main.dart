@@ -1,3 +1,4 @@
+import 'package:code_source/const/AppColors.dart';
 import 'package:code_source/view/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -10,8 +11,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: ThemeData.light().copyWith(
+        appBarTheme: AppBarTheme(
+          elevation: 0.0,
+          backgroundColor: AppColors.lightWhite
+        ),
+        scaffoldBackgroundColor: AppColors.lightWhite,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            primary: AppColors.lightPurple,
+            onPrimary: AppColors.lightWhite,
+          )
+        )
       ),
       home: HomeScreen(),
     );
