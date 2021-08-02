@@ -1,7 +1,11 @@
-import 'package:code_source/const/AppStrings.dart';
-import 'package:code_source/utilities/get_screen_size.dart';
-import 'package:code_source/view/widget/AppButton.dart';
+
 import 'package:flutter/material.dart';
+import 'package:make_me/const/AppStrings.dart';
+import 'package:make_me/utilities/get_screen_size.dart';
+import 'package:make_me/view/widget/AppButton.dart';
+import 'package:make_me/view/widget/build_app_bar.dart';
+
+import '../app_routes.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -10,7 +14,7 @@ class HomeScreen extends StatelessWidget {
     final double homeButtonWidth = getScreenWidth(context) * 0.9;
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: buildAppBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -23,14 +27,12 @@ class HomeScreen extends StatelessWidget {
               children: [
                 AppButton(
                   label: AppStrings.signInBtnText,
-                  onPressed: () {//todo : register callback
-                  },
+                  onPressed: () => Navigator.pushNamed(context, IdScreen.registerScreen),
                   width: homeButtonWidth,
                 ),
                 AppButton(
                   label: AppStrings.logInBtnText,
-                  onPressed: () {//todo : logIn callback
-                  },
+                  onPressed: () => Navigator.pushNamed(context, IdScreen.loginScreen),
                   width: homeButtonWidth,
                 )
               ],
