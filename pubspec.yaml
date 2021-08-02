@@ -1,4 +1,4 @@
-name: code_source
+name: make_me
 description: A task manager app
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
