@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
             Column(
               children: [
                 AppButton(
-                  label: AppStrings.signInBtnText,
+                  label: AppStrings.registerBtnText,
                   onPressed: () => Navigator.pushNamed(context, IdScreen.registerScreen),
                   width: homeButtonWidth,
                 ),
