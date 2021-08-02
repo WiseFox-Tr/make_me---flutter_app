@@ -4,8 +4,14 @@ class AppStrings {
   static const String toDoListImgPath = 'assets/images/todolist_img.jpg';
 
   //--------------- Text -----------------
+  // -- general content
   static const String appTitle = 'Make me';
-  static const String logInBtnText = 'Se connecter';
   static const String nothingToShow = 'Rien à montrer !';
-  static const String signInBtnText = 'Créer un compte';
+
+  // -- account management content
+  static const String emailHint = 'e-mail';
+  static const String logInBtnText = 'Se connecter';
+  static const String passwordHint = 'password';
+  static const String passwordConfirmationHint = 'passwordConfirmation';
+  static const String registerBtnText = 'Créer un compte';
 }
