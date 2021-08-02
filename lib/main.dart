@@ -1,5 +1,5 @@
 import 'package:code_source/const/AppColors.dart';
-import 'package:code_source/view/screen/home_screen.dart';
+import 'package:code_source/view/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
           )
         )
       ),
-      home: HomeScreen(),
+      routes: AppRoutes.routes,
+      initialRoute: IdScreen.homeScreen,
     );
   }
 }
