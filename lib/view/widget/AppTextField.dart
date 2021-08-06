@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:make_me/const/AppColors.dart';
-import 'package:make_me/const/AppStrings.dart';
 import 'package:make_me/utilities/get_screen_size.dart';
 
 class AppTextField extends StatelessWidget {
