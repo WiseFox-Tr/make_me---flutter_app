@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:make_me/const/AppColors.dart';
+import 'package:make_me/ui/app_routes.dart';
 
-import 'view/app_routes.dart';
 
 void main() {
   runApp(MyApp());

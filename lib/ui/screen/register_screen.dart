@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:make_me/const/AppStrings.dart';
+import 'package:make_me/ui/widget/AppButton.dart';
+import 'package:make_me/ui/widget/AppLogo.dart';
+import 'package:make_me/ui/widget/AppTextField.dart';
+import 'package:make_me/ui/widget/build_app_bar.dart';
 import 'package:make_me/utilities/get_screen_size.dart';
-import 'package:make_me/view/widget/AppButton.dart';
-import 'package:make_me/view/widget/AppLogo.dart';
-import 'package:make_me/view/widget/AppTextField.dart';
-import 'package:make_me/view/widget/build_app_bar.dart';
 
 class RegisterScreen extends StatelessWidget {
 
