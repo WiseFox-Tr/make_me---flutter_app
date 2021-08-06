@@ -6,12 +6,16 @@ import 'package:make_me/utilities/get_screen_size.dart';
 class AppTextField extends StatelessWidget {
 
   final bool isDense;
+  final isPassword;
+  final TextInputType keyboardType;
   final Function onChanged;
   final TextAlign textAlign;
   final String textHint;
 
   AppTextField({
     this.isDense = true,
+    this.isPassword = false,
+    this.keyboardType = TextInputType.text,
     required this.onChanged,
     this.textAlign = TextAlign.center,
     required this.textHint,
@@ -23,8 +27,9 @@ class AppTextField extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: getScreenWidth(context) * 0.08, vertical: 10.0),
       child: TextField(
         cursorColor: AppColors.darkBlue,
+        keyboardType: keyboardType,
+        obscureText: isPassword,
         textAlign: textAlign,
-        keyboardType: TextInputType.text,
         decoration: InputDecoration(
           isDense: isDense,
           hintStyle: TextStyle(color: Colors.blueGrey),
