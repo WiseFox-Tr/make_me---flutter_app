@@ -20,7 +20,7 @@ class AppTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: getScreenWidth(context) * 0.08, vertical: 15.0),
+      padding: EdgeInsets.symmetric(horizontal: getScreenWidth(context) * 0.08, vertical: 10.0),
       child: TextField(
         cursorColor: AppColors.darkBlue,
         textAlign: textAlign,
