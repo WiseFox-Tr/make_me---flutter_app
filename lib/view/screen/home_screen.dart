@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:make_me/const/AppStrings.dart';
 import 'package:make_me/utilities/get_screen_size.dart';
 import 'package:make_me/view/widget/AppButton.dart';
@@ -41,11 +42,11 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(bottom: 15.0),
-                  child: Text(AppStrings.nothingToShow),
+                  child: Text(AppStrings.whatHaveYouToDo, style: TextStyle(fontSize: 20)),
                 ),
-                Image.asset(
+                SvgPicture.asset(
                   AppStrings.toDoListImgPath,
-                  height: getScreenHeight(context) * 0.5,
+                  height: getScreenHeight(context) * 0.2,
                 )
               ],
             ),
