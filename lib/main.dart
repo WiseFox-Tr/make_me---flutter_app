@@ -15,12 +15,17 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           elevation: 0.0,
           backgroundColor: AppColors.lightWhite,
-          actionsIconTheme: IconThemeData(color: AppColors.darkBlue)
+          iconTheme: IconThemeData(
+            color: AppColors.darkBlue,
+          ),
+          actionsIconTheme: IconThemeData(
+            color: AppColors.darkBlue,
+          ),
         ),
         scaffoldBackgroundColor: AppColors.lightWhite,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary: AppColors.lightPurple,
+            primary: AppColors.darkBlue,
             onPrimary: AppColors.lightWhite,
           )
         )
