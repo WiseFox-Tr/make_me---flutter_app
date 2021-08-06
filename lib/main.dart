@@ -28,7 +28,13 @@ class MyApp extends StatelessWidget {
             primary: AppColors.darkBlue,
             onPrimary: AppColors.lightWhite,
           )
-        )
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            primary: AppColors.darkBlue,
+            textStyle: TextStyle(fontSize: 16.0),
+          ),
+        ),
       ),
       routes: AppRoutes.routes,
       initialRoute: IdScreen.homeScreen,
