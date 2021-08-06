@@ -1,4 +1,4 @@
-package com.wisefox.code_source
+package com.wisefox.make_me
 
 import io.flutter.embedding.android.FlutterActivity
 
