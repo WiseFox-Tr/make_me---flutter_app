@@ -12,48 +12,51 @@ class RegisterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: buildAppBar(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            AppLogo(),
-            Column(
-              children: [
-                AppTextField(
-                  textHint: AppStrings.emailHint,
-                  onChanged: () {},
-                ),
-                AppTextField(
-                  textHint: AppStrings.passwordHint,
-                  onChanged: () {},
-                ),
-                AppTextField(
-                  textHint: AppStrings.passwordConfirmationHint,
-                  onChanged: () {},
-                ),
+      body: SingleChildScrollView(
+        child: SizedBox(
+          height: getScreenHeight(context) * 0.8,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              AppLogo(),
+              Column(
+                children: [
+                  AppTextField(
+                    textHint: AppStrings.emailHint,
+                    onChanged: () {},
+                  ),
+                  AppTextField(
+                    textHint: AppStrings.passwordHint,
+                    onChanged: () {},
+                  ),
+                  AppTextField(
+                    textHint: AppStrings.passwordConfirmationHint,
+                    onChanged: () {},
+                  ),
 
-              ],
-            ),
-            Align(
-              alignment: Alignment.bottomRight,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: getScreenHeight(context) * 0.03,
-                  horizontal: getScreenWidth(context) * 0.08,
-                ),
-                child: AppButton(
-                  label: AppStrings.registerBtnText,
-                  onPressed: () {
-                    //todo : create firebase project
-                    //todo : register callback
-                  },
-                ),
+                ],
               ),
-            )
-          ],
-        )
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: getScreenWidth(context) * 0.08,
+                  ),
+                  child: AppButton(
+                    label: AppStrings.registerBtnText,
+                    onPressed: () {
+                      //todo : create firebase project
+                      //todo : register callback
+                    },
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
