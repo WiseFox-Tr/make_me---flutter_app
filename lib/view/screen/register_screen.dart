@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:make_me/const/AppColors.dart';
 import 'package:make_me/const/AppStrings.dart';
 import 'package:make_me/utilities/get_screen_size.dart';
 import 'package:make_me/view/widget/AppButton.dart';
@@ -14,10 +12,10 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: buildAppBar(),
+      appBar: buildAppBar(title: AppStrings.registerBtnText),
       body: SingleChildScrollView(
         child: SizedBox(
-          height: getScreenHeight(context) * 0.8,
+          height: getScreenHeight(context) * 0.85,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -25,22 +23,24 @@ class RegisterScreen extends StatelessWidget {
               Column(
                 children: [
                   AppTextField(
+                    keyboardType: TextInputType.emailAddress,
+                    onChanged: () {},
                     textHint: AppStrings.emailHint,
-                    onChanged: () {},
                   ),
                   AppTextField(
+                    isPassword: true,
+                    onChanged: () {},
                     textHint: AppStrings.passwordHint,
-                    onChanged: () {},
                   ),
                   AppTextField(
-                    textHint: AppStrings.passwordConfirmationHint,
+                    isPassword: true,
                     onChanged: () {},
+                    textHint: AppStrings.passwordConfirmationHint,
                   ),
-
                 ],
               ),
               Align(
-                alignment: Alignment.bottomRight,
+                alignment: Alignment.centerRight,
                 child: Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: getScreenWidth(context) * 0.08,
@@ -61,5 +61,3 @@ class RegisterScreen extends StatelessWidget {
     );
   }
 }
-
-
