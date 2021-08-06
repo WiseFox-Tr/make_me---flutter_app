@@ -12,6 +12,6 @@ class AppStrings {
   static const String emailHint = 'e-mail';
   static const String logInBtnText = 'Se connecter';
   static const String passwordHint = 'password';
-  static const String passwordConfirmationHint = 'passwordConfirmation';
+  static const String passwordConfirmationHint = 'password confirmation';
   static const String registerBtnText = 'Créer un compte';
 }
