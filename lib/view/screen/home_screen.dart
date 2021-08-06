@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
       appBar: buildAppBar(),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Text(
               AppStrings.appTitle,
@@ -28,12 +28,12 @@ class HomeScreen extends StatelessWidget {
                 AppButton(
                   label: AppStrings.registerBtnText,
                   onPressed: () => Navigator.pushNamed(context, IdScreen.registerScreen),
-                  width: homeButtonWidth,
+                  minWidth: homeButtonWidth,
                 ),
                 AppButton(
                   label: AppStrings.logInBtnText,
                   onPressed: () => Navigator.pushNamed(context, IdScreen.loginScreen),
-                  width: homeButtonWidth,
+                  minWidth: homeButtonWidth,
                 )
               ],
             ),
